@@ -2,27 +2,6 @@
 
 I have coded this design pattern while taking the course **Foundations of Programming: Design Patterns** from **Lynda.com** . 
 
-###Decorator Pattern
-
-This pattern attaches additional responsibilities to object dynamically. Decorators provide a flixible alternative to sub classing for extending functionality.
-
-![decorator](https://github.com/achyutdev/Design-pattern/blob/master/decorator.jpg)
-
-###Factory Pattern
-
-Factory Method Pattern defines an interface for creating an object but lets sub classes decide which class to instantiate. Factory Method lets a class defer instantiation to sub class.
-![Factory](https://github.com/achyutdev/Design-pattern/blob/master/factory.jpg)
-
-###Iterator Pattern
-It provides a way to access the elements of an aggregate object squencetially without exposing its underlying representation.
-
-![Iterator](https://github.com/achyutdev/Design-pattern/blob/master/iterator.jpg)
-
-###Observer Pattern
-The observer pattern defines a one to many dependency between objects so that when one object changes state, all of its dependent are notidied and updated automatically.
-
-![Observer](https://github.com/achyutdev/Design-pattern/blob/master/observer.jpg)
-
 ###Singleton Pattern
 This pattern ensure a class has only one instance and provides a global access point to it.
 ####classic way of creating singleton
@@ -75,6 +54,28 @@ public Singleton{
   }
 }
 ```
+
+
+###Decorator Pattern
+
+This pattern attaches additional responsibilities to object dynamically. Decorators provide a flixible alternative to sub classing for extending functionality.
+
+![decorator](https://github.com/achyutdev/Design-pattern/blob/master/decorator.jpg)
+
+###Factory Pattern
+
+Factory Method Pattern defines an interface for creating an object but lets sub classes decide which class to instantiate. Factory Method lets a class defer instantiation to sub class.
+![Factory](https://github.com/achyutdev/Design-pattern/blob/master/factory.jpg)
+
+###Iterator Pattern
+It provides a way to access the elements of an aggregate object squencetially without exposing its underlying representation.
+
+![Iterator](https://github.com/achyutdev/Design-pattern/blob/master/iterator.jpg)
+
+###Observer Pattern
+The observer pattern defines a one to many dependency between objects so that when one object changes state, all of its dependent are notidied and updated automatically.
+
+![Observer](https://github.com/achyutdev/Design-pattern/blob/master/observer.jpg)
 
 
 
