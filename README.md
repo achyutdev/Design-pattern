@@ -55,6 +55,68 @@ public Singleton{
 }
 ```
 
+###Template Pattern
+
+Sometimes a class at the top of an inheritance hierarchy needs to carry out a sequence of tasks, some of which need to be implemented by subclasses. 
+Super abstract class 
+```Java
+public abstract class DataParser {
+	//Template method
+    //This method defines a generic structure for parsing data
+    public void parseDataAndGenerateOutput() { 
+        readData();
+        processData();
+        writeData();
+    }
+    //These methods will be implemented by its subclass
+    abstract void readData();
+    abstract void processData();
+    
+    //We have to write output in a CSV file so this step will be same for all subclasses
+    public void writeData() {
+        System.out.println("Output generated,writing to CSV");
+    }
+}
+```
+
+This class is extends by other class which implement those two abstract method.
+
+**DatabaseDataParser class**
+```Java
+public class DatabaseDataParser extends DataParser {
+
+    void readData() {
+        System.out.println("Reading data from database");
+    }
+
+    void processData() {
+        System.out.println("Looping through datasets");        
+    }
+}
+```
+**CSVDataParser class**
+```Java
+public class CSVDataParser extends DataParser {
+
+    void readData() {
+        System.out.println("Reading data from csv file");
+    }
+    void processData() {
+        System.out.println("Looping through loaded csv file");    
+    }
+}
+```
+The main class create same super type of object from each subclass and call method.
+
+```java 
+	public static void main(String[] args) {
+		DataParser csvDataParser = new CSVDataParser();
+		csvDataParser.parseDataAndGenerateOutput();
+		DataParser databaseDataParser = new DatabaseDataParser();
+		databaseDataParser.parseDataAndGenerateOutput();
+	}
+```
+.
 
 ###Decorator Pattern
 
